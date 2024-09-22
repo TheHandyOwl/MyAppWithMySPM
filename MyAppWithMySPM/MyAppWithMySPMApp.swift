@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct MyAppWithMySPMApp: App {
+    
+    let greetingsVM = GreetingsVM()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GreetingsView()
+                .environment(greetingsVM)
         }
     }
 }

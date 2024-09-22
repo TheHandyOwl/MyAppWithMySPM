@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D30F3F52CA0989D0017797B /* GreetingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30F3F32CA0989D0017797B /* GreetingsVM.swift */; };
+		1D30F3F62CA0989D0017797B /* GreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D30F3F42CA0989D0017797B /* GreetingsView.swift */; };
 		1D622A602CA08DE800528206 /* MyAppWithMySPMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D622A5F2CA08DE800528206 /* MyAppWithMySPMApp.swift */; };
-		1D622A622CA08DE800528206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D622A612CA08DE800528206 /* ContentView.swift */; };
 		1D622A642CA08DE900528206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D622A632CA08DE900528206 /* Assets.xcassets */; };
 		1D622A672CA08DE900528206 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D622A662CA08DE900528206 /* Preview Assets.xcassets */; };
+		1D622A6F2CA08E1600528206 /* MySPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1D622A6E2CA08E1600528206 /* MySPM */; };
+		1D622A752CA0929A00528206 /* NameUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D622A742CA0929A00528206 /* NameUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D30F3F32CA0989D0017797B /* GreetingsVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreetingsVM.swift; sourceTree = "<group>"; };
+		1D30F3F42CA0989D0017797B /* GreetingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreetingsView.swift; sourceTree = "<group>"; };
 		1D622A5C2CA08DE800528206 /* MyAppWithMySPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAppWithMySPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D622A5F2CA08DE800528206 /* MyAppWithMySPMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppWithMySPMApp.swift; sourceTree = "<group>"; };
-		1D622A612CA08DE800528206 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D622A632CA08DE900528206 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D622A662CA08DE900528206 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1D622A742CA0929A00528206 /* NameUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +31,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D622A6F2CA08E1600528206 /* MySPM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D30F3F72CA098AE0017797B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1D30F3F82CA098B90017797B /* Greetings */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1D30F3F82CA098B90017797B /* Greetings */ = {
+			isa = PBXGroup;
+			children = (
+				1D30F3F42CA0989D0017797B /* GreetingsView.swift */,
+				1D30F3F32CA0989D0017797B /* GreetingsVM.swift */,
+			);
+			path = Greetings;
+			sourceTree = "<group>";
+		};
+		1D30F3F92CA099150017797B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1D30F3FA2CA099210017797B /* UseCase */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1D30F3FA2CA099210017797B /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				1D622A742CA0929A00528206 /* NameUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		1D622A532CA08DE800528206 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				1D622A5F2CA08DE800528206 /* MyAppWithMySPMApp.swift */,
-				1D622A612CA08DE800528206 /* ContentView.swift */,
+				1D30F3F72CA098AE0017797B /* Screens */,
+				1D30F3F92CA099150017797B /* Common */,
 				1D622A632CA08DE900528206 /* Assets.xcassets */,
 				1D622A652CA08DE900528206 /* Preview Content */,
 			);
@@ -83,6 +123,9 @@
 			dependencies = (
 			);
 			name = MyAppWithMySPM;
+			packageProductDependencies = (
+				1D622A6E2CA08E1600528206 /* MySPM */,
+			);
 			productName = MyAppWithMySPM;
 			productReference = 1D622A5C2CA08DE800528206 /* MyAppWithMySPM.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +154,9 @@
 				Base,
 			);
 			mainGroup = 1D622A532CA08DE800528206;
+			packageReferences = (
+				1D622A6D2CA08E1600528206 /* XCRemoteSwiftPackageReference "MySPM" */,
+			);
 			productRefGroup = 1D622A5D2CA08DE800528206 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +183,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D622A622CA08DE800528206 /* ContentView.swift in Sources */,
+				1D622A752CA0929A00528206 /* NameUseCase.swift in Sources */,
+				1D30F3F62CA0989D0017797B /* GreetingsView.swift in Sources */,
 				1D622A602CA08DE800528206 /* MyAppWithMySPMApp.swift in Sources */,
+				1D30F3F52CA0989D0017797B /* GreetingsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D622A6D2CA08E1600528206 /* XCRemoteSwiftPackageReference "MySPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TheHandyOwl/MySPM/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D622A6E2CA08E1600528206 /* MySPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D622A6D2CA08E1600528206 /* XCRemoteSwiftPackageReference "MySPM" */;
+			productName = MySPM;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D622A542CA08DE800528206 /* Project object */;
 }
